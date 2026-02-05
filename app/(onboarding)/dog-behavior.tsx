@@ -59,7 +59,7 @@ export default function DogBehaviorScreen() {
         entering={FadeInDown.delay(200).duration(600)}
         style={styles.header}
       >
-        <Text style={styles.title}>Welches Verhalten möchtest{'\n'}du verbessern?</Text>
+        <Text style={styles.title}>Welches <Text style={styles.titleHighlight}>Verhalten</Text> möchtest{'\n'}du verbessern?</Text>
         <Text style={styles.subtitle}>Wähle alle aus, die zutreffen</Text>
       </Animated.View>
 
@@ -155,6 +155,9 @@ const styles = StyleSheet.create({
     color: colors.text,
     textAlign: 'center',
     lineHeight: 34,
+  },
+  titleHighlight: {
+    color: colors.primary,
   },
   subtitle: {
     fontSize: 15,

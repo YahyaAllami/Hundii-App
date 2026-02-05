@@ -1,7 +1,7 @@
+import { router } from 'expo-router';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Animated, { FadeIn, FadeInDown } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { router } from 'expo-router';
 
 const dogImage = require('@/assets/images/dog_first_onborading.png');
 
@@ -161,8 +161,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   dogImage: {
-    width: 450,
-    height: 450,
+    width: 500,
+    height: 500,
   },
   buttonContainer: {
     paddingHorizontal: 24,

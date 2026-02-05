@@ -1,8 +1,8 @@
+import { router } from 'expo-router';
 import { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, ScrollView } from 'react-native';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Animated, { FadeIn, FadeInDown } from 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { router } from 'expo-router';
 
 const colors = {
   primary: '#4C9F18',
@@ -37,8 +37,7 @@ export default function DogEmotionsScreen() {
   };
 
   const handleContinue = () => {
-    // TODO: Navigate to done/home screen
-    // router.replace('/(tabs)');
+    router.push('/(onboarding)/loading');
   };
 
   return (
@@ -59,7 +58,7 @@ export default function DogEmotionsScreen() {
         entering={FadeInDown.delay(200).duration(600)}
         style={styles.header}
       >
-        <Text style={styles.title}>Hat dein Hund emotionale{'\n'}Herausforderungen?</Text>
+        <Text style={styles.title}>Hat dein Hund <Text style={styles.titleHighlight}>emotionale</Text>{'\n'}Herausforderungen?</Text>
         <Text style={styles.subtitle}>Wähle alle aus, die zutreffen</Text>
       </Animated.View>
 
@@ -153,6 +152,9 @@ const styles = StyleSheet.create({
     color: colors.text,
     textAlign: 'center',
     lineHeight: 34,
+  },
+  titleHighlight: {
+    color: colors.primary,
   },
   subtitle: {
     fontSize: 15,

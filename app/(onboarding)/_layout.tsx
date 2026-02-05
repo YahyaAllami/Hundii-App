@@ -15,6 +15,7 @@ export default function OnboardingLayout() {
       <Stack.Screen name="dog-age" />
       <Stack.Screen name="dog-behavior" />
       <Stack.Screen name="dog-emotions" />
+      <Stack.Screen name="loading" options={{ gestureEnabled: false }} />
     </Stack>
   );
 }
